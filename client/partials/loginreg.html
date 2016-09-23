@@ -1,0 +1,19 @@
+<h1>Registration</h1>
+<ul ng-repeat="error in errors">
+	<li>{{error}}</li>
+</ul>
+<form ng-submit="register()">
+  <label>Username: <input type="text" ng-model="user.username"></label>
+  <label>Password: <input type="password" ng-model="user.password"></label>
+  <label>Password Confirmation: <input type="password" ng-model="user.password_confirmation"></label>
+  <button>Register</button>
+</form>
+<h1>Login</h1>
+<ul ng-repeat="error in loginErrors">
+	<li>{{error}}</li>
+</ul>
+<form ng-submit="login()">
+  <label>Username: <input type="text" name="username" ng-model="loginUser.username"></label>
+  <label>Password: <input type="password" name="password" ng-model="loginUser.password"></label>
+  <button>Login</button>
+</form>

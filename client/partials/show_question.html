@@ -1,0 +1,8 @@
+<p><a href="#/dashboard">Home</a> | <a href="#/questions/{{question._id}}/new_answer">Answer This Question</a> | <a href="/logout">Logout</a></p>
+<h1>{{question.question}}</h1>
+<h3>{{question.description}}</h3>
+
+<div ng-repeat="answer in question.answers | orderBy:'-likes.length'">
+	<p>{{answer._user.username}}:</p>
+	<p>{{answer.answer}} | {{answer.likes.length}} likes <button ng-click="likeAnswer(answer._id)">Like</button></p>
+</div>

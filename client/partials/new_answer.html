@@ -1,0 +1,11 @@
+<h3><a href="#/dashboard">Home</a> | <a href="#/questions/{{question._id}}">Go Back to Question</a> | <a href="/logout">Logout</a></h3>
+<h1>{{question.question}}</h1>
+<p>{{question.description}}</p>
+<p ng-if="error">{{error}}</p>
+<form>
+	<label>Your answer:</label>
+	<textarea ng-model="answer.answer"></textarea>
+	<label>Supporting details for your answer (optional):</label>
+	<textarea ng-model="answer.details"></textarea>
+	<a href="#/dashboard"><button>Cancel</button></a> <button ng-click="create()">Submit</button>
+</form>
